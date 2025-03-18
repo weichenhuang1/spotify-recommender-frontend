@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8000"; // FastAPI backend
+const API_BASE_URL = "https://spotify-recommender-jet.vercel.app"; // FastAPI backend
 
 export const fetchClusterPlot = async () => {
     try {
-        const plotResponse = await axios.get("http://localhost:8000/plot_clusters");
+        const plotResponse = await axios.get("https://spotify-recommender-jet.vercel.app/plot_clusters");
         const plotData = typeof plotResponse.data === "string" ? JSON.parse(plotResponse.data) : plotResponse.data;
         return plotData;  //
     } catch (error) {
