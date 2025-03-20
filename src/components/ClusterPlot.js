@@ -8,7 +8,7 @@ const ClusterPlot = () => {
 
     useEffect(() => {
         if (showPlot) {
-            fetch("http://localhost:8000/plot_clusters")
+            fetch("spotify-recommender-backend-production.up.railway.app/plot_clusters")
                 .then(response => response.json())
                 .then(data => setPlotData(JSON.parse(data)))
                 .catch(error => console.error("Error fetching plot:", error));
